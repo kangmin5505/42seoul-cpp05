@@ -6,7 +6,7 @@
 /*   By: kangkim <kangkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 00:17:43 by kangkim           #+#    #+#             */
-/*   Updated: 2022/04/13 00:32:58 by kangkim          ###   ########.fr       */
+/*   Updated: 2022/04/13 10:24:42 by kangkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <ctime>
 
 const std::string RobotomyRequestForm::kFormName = "RobotomyRequestForm";
+const std::string RobotomyRequestForm::kRequestString = "robotomy request";
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target)
   : Form(kFormName, kRequiredSignGrade, kRequiredExecGrade)

@@ -6,7 +6,7 @@
 /*   By: kangkim <kangkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 17:52:47 by kangkim           #+#    #+#             */
-/*   Updated: 2022/04/12 00:39:25 by kangkim          ###   ########.fr       */
+/*   Updated: 2022/04/13 00:03:52 by kangkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ const char *Bureaucrat::GradeTooLowException::what(void) const throw() {
 void Bureaucrat::signForm(Form &form) const {
   try {
     form.beSigned(*this);
-    std::cout << getName() << " signed " << form.get_name();
+    std::cout << getName() << " signed " << form.get_name() << std::endl;
   } catch (GradeTooLowException &e) {
     std::cerr << getName() << " couldn't sign " << form.get_name()
               << " because too low" << std::endl;

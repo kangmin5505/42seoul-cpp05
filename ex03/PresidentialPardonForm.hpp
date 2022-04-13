@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kangkim <kangkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/12 11:11:58 by kangkim           #+#    #+#             */
-/*   Updated: 2022/04/12 23:27:29 by kangkim          ###   ########.fr       */
+/*   Created: 2022/04/13 00:13:17 by kangkim           #+#    #+#             */
+/*   Updated: 2022/04/13 10:26:55 by kangkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERY_CREATION_FORM_H_ 
-# define SHRUBBERY_CREATION_FORM_H_ 
+#ifndef PRESIDENTIAL_PARDON_FORM_H_
+# define PRESIDENTIAL_PARDON_FORM_H_
 
 # include "Form.hpp"
 
 # include <string>
 
-class ShrubberyCreationForm : public Form {
+class PresidentialPardonForm : public Form {
 public:
-  ShrubberyCreationForm(const std::string &target);
-  ~ShrubberyCreationForm(void);
-  ShrubberyCreationForm &operator=(const ShrubberyCreationForm &rhs);
+  PresidentialPardonForm(const std::string &target);
+  ~PresidentialPardonForm(void);
+  PresidentialPardonForm &operator=(const PresidentialPardonForm &rhs);
 
   void execute(Bureaucrat const &executor) const;
   const std::string &get_target(void) const;
 
-private:
-  ShrubberyCreationForm(void);
-  ShrubberyCreationForm(const ShrubberyCreationForm &origin);
+  static const std::string kRequestString;
 
-  static const int kRequiredSignGrade = 145;
-  static const int kRequiredExecGrade = 137;
+private:
+  PresidentialPardonForm(void);
+  PresidentialPardonForm(const PresidentialPardonForm &origin);
+
+  static const int kRequiredSignGrade = 25;
+  static const int kRequiredExecGrade = 5;
   static const std::string kFormName;
 
   const std::string target_;

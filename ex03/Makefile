@@ -6,7 +6,7 @@
 #    By: kangkim <kangkim@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/11 17:25:41 by kangkim           #+#    #+#              #
-#    Updated: 2022/04/13 10:45:46 by kangkim          ###   ########.fr        #
+#    Updated: 2022/04/13 10:45:54 by kangkim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CXXDEBUGFLAGS = -fsanitize=address -fsanitize=undefined
 
 NAME = main
 SRCS = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp \
-				PresidentialPardonForm.cpp
+				PresidentialPardonForm.cpp Intern.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 

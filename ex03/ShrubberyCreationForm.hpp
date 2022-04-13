@@ -6,7 +6,7 @@
 /*   By: kangkim <kangkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 11:11:58 by kangkim           #+#    #+#             */
-/*   Updated: 2022/04/12 23:27:29 by kangkim          ###   ########.fr       */
+/*   Updated: 2022/04/13 10:27:33 by kangkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ public:
 
   void execute(Bureaucrat const &executor) const;
   const std::string &get_target(void) const;
+
+  static const std::string kRequestString;
 
 private:
   ShrubberyCreationForm(void);

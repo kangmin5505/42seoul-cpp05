@@ -6,7 +6,7 @@
 /*   By: kangkim <kangkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 21:51:52 by kangkim           #+#    #+#             */
-/*   Updated: 2022/04/13 10:45:03 by kangkim          ###   ########.fr       */
+/*   Updated: 2022/04/13 10:44:51 by kangkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ public:
   void beSigned(const Bureaucrat &b);
 
   virtual void execute(Bureaucrat const &executor) const = 0;
+
+  static const int kFormTypeNum = 3;
 
 protected:
   void executable(const Bureaucrat &b) const;

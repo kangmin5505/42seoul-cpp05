@@ -6,7 +6,7 @@
 /*   By: kangkim <kangkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 23:04:30 by kangkim           #+#    #+#             */
-/*   Updated: 2022/04/13 00:48:54 by kangkim          ###   ########.fr       */
+/*   Updated: 2022/04/13 10:25:02 by kangkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <fstream>
 
 const std::string ShrubberyCreationForm::kFormName = "ShrubberyCreationForm";
+const std::string ShrubberyCreationForm::kRequestString = "shrubbery request";
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target)
   : Form(kFormName, kRequiredSignGrade, kRequiredExecGrade)

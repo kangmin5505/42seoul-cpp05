@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kangkim <kangkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/12 11:11:58 by kangkim           #+#    #+#             */
-/*   Updated: 2022/04/12 23:27:29 by kangkim          ###   ########.fr       */
+/*   Created: 2022/04/13 00:13:17 by kangkim           #+#    #+#             */
+/*   Updated: 2022/04/13 10:26:48 by kangkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERY_CREATION_FORM_H_ 
-# define SHRUBBERY_CREATION_FORM_H_ 
+#ifndef ROBOTO_MY_REQUEST_FORM_H_
+# define ROBOTO_MY_REQUEST_FORM_H_
 
 # include "Form.hpp"
 
 # include <string>
 
-class ShrubberyCreationForm : public Form {
+class RobotomyRequestForm : public Form {
 public:
-  ShrubberyCreationForm(const std::string &target);
-  ~ShrubberyCreationForm(void);
-  ShrubberyCreationForm &operator=(const ShrubberyCreationForm &rhs);
+  RobotomyRequestForm(const std::string &target);
+  ~RobotomyRequestForm(void);
+  RobotomyRequestForm &operator=(const RobotomyRequestForm &rhs);
 
   void execute(Bureaucrat const &executor) const;
   const std::string &get_target(void) const;
 
-private:
-  ShrubberyCreationForm(void);
-  ShrubberyCreationForm(const ShrubberyCreationForm &origin);
+  static const std::string kRequestString;
 
-  static const int kRequiredSignGrade = 145;
-  static const int kRequiredExecGrade = 137;
+private:
+  RobotomyRequestForm(void);
+  RobotomyRequestForm(const RobotomyRequestForm &origin);
+
+  static const int kRequiredSignGrade = 72;
+  static const int kRequiredExecGrade = 45;
   static const std::string kFormName;
 
   const std::string target_;

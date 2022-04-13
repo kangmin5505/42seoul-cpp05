@@ -6,7 +6,7 @@
 /*   By: kangkim <kangkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 18:42:20 by kangkim           #+#    #+#             */
-/*   Updated: 2022/04/13 01:04:39 by kangkim          ###   ########.fr       */
+/*   Updated: 2022/04/13 10:54:59 by kangkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
-
+#include "Intern.hpp"
 #include <iomanip>
 
 void test_function(Form &f, const std::string b_name, int b_grade)
@@ -37,32 +37,40 @@ void test_function(Form &f, const std::string b_name, int b_grade)
 }
 
 int main() {
+  Intern intern;
+  Form *form;
+
   std::cout << std::boolalpha;
-  std::cout << "===== ShrubberyCreationForm test =====" << std::endl;
-  ShrubberyCreationForm sh("shrub_normal_test");
-  test_function(sh, "kang", 33);
-  ShrubberyCreationForm sh2("shrub_catch_test1");
-  test_function(sh2, "kang", 146);
-  ShrubberyCreationForm sh3("shrub_catch_test2");
-  test_function(sh3, "kang", 138);
+
+  std::cout << "========== shrubbery test ==========" << std::endl;
+  form = intern.makeForm(ShrubberyCreationForm::kRequestString, "shrubbery test");
+  if (form) {
+    test_function(*form, "kangkim", 10);
+    delete form;
+  }
   std::cout << std::endl;
 
-  std::cout << "===== RobotomyRequestForm test =====" << std::endl;
-  RobotomyRequestForm ro("roboto_normal_test");
-  test_function(ro, "kang", 33);
-  RobotomyRequestForm ro2("roboto_catch_test1");
-  test_function(ro2, "kang", 73);
-  RobotomyRequestForm ro3("roboto_catch_test2");
-  test_function(ro3, "kang", 50);
+  std::cout << "========== robotomy test ==========" << std::endl;
+  form = intern.makeForm(RobotomyRequestForm::kRequestString, "roboto test");
+  if (form) {
+    test_function(*form, "kangkim", 10);
+    delete form;
+  }
   std::cout << std::endl;
-  
-  std::cout << "===== PresidentialPardonForm test =====" << std::endl;
-  PresidentialPardonForm pr("prediential_normal_test");
-  test_function(pr, "kang", 3);
-  PresidentialPardonForm pr2("prediential_catch_test1");
-  test_function(pr2, "kang", 26);
-  PresidentialPardonForm pr3("prediential_catch_test2");
-  test_function(pr3, "kang", 20);
+
+  std::cout << "========== presidential pardon test ==========" << std::endl;
+  form = intern.makeForm(PresidentialPardonForm::kRequestString, "presidential pardon test");
+  if (form) {
+    test_function(*form, "kangkim", 10);
+    delete form;
+  }
   std::cout << std::endl;
+
+  std::cout << "========== wrong test ==========" << std::endl;
+  form = intern.makeForm("wrong requset", "wrong request");
+  if (form) {
+    test_function(*form, "kangkim", 10);
+    delete form;
+  }
 
 }

@@ -6,13 +6,14 @@
 /*   By: kangkim <kangkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 00:17:43 by kangkim           #+#    #+#             */
-/*   Updated: 2022/04/13 00:38:12 by kangkim          ###   ########.fr       */
+/*   Updated: 2022/04/13 10:23:40 by kangkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
 const std::string PresidentialPardonForm::kFormName = "PresidentialPardonForm";
+const std::string PresidentialPardonForm::kRequestString = "presidential pardon request";
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string &target)
   : Form(kFormName, kRequiredSignGrade, kRequiredExecGrade)
